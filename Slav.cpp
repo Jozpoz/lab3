@@ -1,5 +1,7 @@
 #include "Slav.h"
 #include <fstream>
+#include <iterator>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -18,7 +20,8 @@ void Slav::init()
 
 Slav::Slav()
 {
-	static int amountOfNames = (init(), names.size());
+	//Leniwa Inicjacja - opoznij tworzenie obiektu dopoki nie zajdzie potrzeba uzycia
+	static int amountOfNames = (init(), names.size()); 
 	_name = names[rand() % amountOfNames];
 	_id = _counter++;
 }
